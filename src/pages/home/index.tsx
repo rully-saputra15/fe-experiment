@@ -1,4 +1,6 @@
 import React from "react";
+import { FiAlertOctagon, FiArrowRightCircle } from "react-icons/fi";
+
 import "./homePage.css";
 
 const HomePage = () => {
@@ -16,6 +18,19 @@ const HomePage = () => {
           />
           <p className="z-20">Johnny Rogers</p>
           <small className="z-20">@jonnyragers</small>
+        </div>
+      </article>
+      <article className="flex flex-col w-56 h-56">
+        <h3>Group Animation</h3>
+        <div className="group shadow-lg rounded-lg flex flex-col relative gap-4 overflow-hidden transition-all">
+          <div className="group-hover:bg-red-300 group-hover:-translate-y-6 h-24 bg-red-200 duration-200"></div>
+          <div className="absolute bottom-2 left-2 duration-200">
+            <FiAlertOctagon className="group-hover:-translate-y-2 duration-200" />
+            <small className="group-hover:block hidden duration-200">
+              Lorem ipsum dolor
+            </small>
+          </div>
+          <FiArrowRightCircle className="group-hover:visible group-hover:-translate-x-2 invisible duration-200 absolute right-2 top-2" />
         </div>
       </article>
     </div>
