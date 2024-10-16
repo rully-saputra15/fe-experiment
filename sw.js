@@ -18,7 +18,7 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  console.log(`fetching ${event.request.url}`);
+  // console.log(`fetching ${event.request.url}`);
   if (navigator.onLine) {
     const fetchRequest = event.request.clone();
     return fetch(fetchRequest).then((response) => {
