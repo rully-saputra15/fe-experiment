@@ -19,6 +19,9 @@ const UtilitiesPage = () => {
     webWorker.current.addEventListener("message", (event) => {
       setUsers(event.data);
     });
+    return () => {
+      webWorker.current.terminate();
+    };
   }, [webWorker]);
 
   const handleSort = () => {
