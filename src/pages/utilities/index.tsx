@@ -32,7 +32,7 @@ const UtilitiesPage = () => {
       <button onClick={handleSort}>Sort</button>
       {users?.map((user) => {
         return (
-          <p>
+          <p key={user.id}>
             {user.commentCount} - {user.name}
           </p>
         );
