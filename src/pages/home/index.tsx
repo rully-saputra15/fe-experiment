@@ -24,7 +24,16 @@ const HomePage = () => {
         </article>
         <article className="flex flex-col w-56 h-56">
           <h3>Group Animation</h3>
-          <div className="group shadow-lg rounded-lg flex flex-col relative gap-4 overflow-hidden transition-all">
+          <div className="group hover:scale-150 shadow-lg rounded-lg flex flex-col relative gap-4 overflow-hidden transition-all">
+            <iframe
+              src="https://www.youtube.com/embed/A9Qpr_5Tk-0?si=qEFJJpJ3PbIvJJlC"
+              title="YouTube video player"
+              frameborder="0"
+              className="group-hover:opacity-100 group-hover:scale-100 group-hover:visible group-hover:relative opacity-0 absolute invisible duration-200"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             <div className="group-hover:bg-red-300 group-hover:-translate-y-6 h-24 bg-red-200 duration-200"></div>
             <div className="absolute bottom-2 left-2 duration-200">
               <FiAlertOctagon className="group-hover:-translate-y-2 duration-200" />
@@ -32,6 +41,7 @@ const HomePage = () => {
                 Lorem ipsum dolor
               </small>
             </div>
+
             <FiArrowRightCircle className="group-hover:visible group-hover:-translate-x-2 invisible duration-200 absolute right-2 top-2" />
           </div>
         </article>
