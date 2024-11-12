@@ -1,0 +1,12 @@
+#image {
+  contain: layout;
+  view-transition-name: photo-image;
+}
+
+::view-transition-new(photo-image):only-child {
+  opacity: 1;
+}
+
+::view-transition-old(photo-image):only-child {
+  opacity: 0;
+}

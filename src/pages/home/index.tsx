@@ -3,6 +3,7 @@ import { FiAlertOctagon, FiArrowRightCircle } from "react-icons/fi";
 
 import "./homePage.css";
 import Carousel from "./blocks/Carousel";
+import ViewTransitionPage from "./blocks/ViewTransitionPage";
 
 const HomePage = () => {
   return (
@@ -48,6 +49,9 @@ const HomePage = () => {
       </section>
       <section className="flex justify-evenly items-center">
         <Carousel />
+      </section>
+      <section className="flex flex-col justify-center items-center">
+        <ViewTransitionPage />
       </section>
     </div>
   );
