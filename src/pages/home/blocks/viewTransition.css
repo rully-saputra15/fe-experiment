@@ -3,10 +3,32 @@
   view-transition-name: photo-image;
 }
 
-::view-transition-new(photo-image):only-child {
-  opacity: 1;
+::view-transition-new(photo-image) {
+  animation-name: slide-down;
 }
 
-::view-transition-old(photo-image):only-child {
-  opacity: 0;
+::view-transition-old(photo-image) {
+  animation-name: slide-up;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
 }
