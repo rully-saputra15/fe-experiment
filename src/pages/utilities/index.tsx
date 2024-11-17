@@ -6,6 +6,7 @@ import worker from "../../app.worker";
 import CurrentUserLoader from "./ContainerComponentPatternBlocks/CurrentUserLoader";
 import UserInfo from "./ContainerComponentPatternBlocks/UserInfo";
 import Onboarding from "./OnboardingComponent/Onboarding";
+import withLoading from "./HOCs/withLoading";
 
 type StepProps = {
   goToNext?: (data: Record<string, string>) => void;
@@ -38,6 +39,13 @@ const StepThree = ({ goToNext = defaultGoToNext }: StepProps) => {
     </>
   );
 };
+
+/** HOCS */
+const NewComp = ({ userId }: { userId: string }) => {
+  return <div>new comp {userId}</div>;
+};
+
+const NewCompWithUserId = withLoading(NewComp)("123");
 const UtilitiesPage = () => {
   const [users, setUsers] = React.useState<Array<User>>([]);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -81,6 +89,7 @@ const UtilitiesPage = () => {
         <StepTwo />
         <StepThree />
       </Onboarding>
+      <NewCompWithUserId />
       <br />
       {/* <button onClick={handleSort}>Sort</button> */}
       {/* {isLoading && <p>Loading...</p>}
