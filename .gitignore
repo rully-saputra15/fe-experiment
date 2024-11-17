@@ -2,7 +2,7 @@
 .DS_Store
 *.local
 *.log*
-.million
+.million/store.json
 
 # Dist
 node_modules
@@ -17,5 +17,3 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 .idea
-
-store.json
