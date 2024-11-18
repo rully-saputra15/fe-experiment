@@ -12,7 +12,7 @@ dist/
 .vercel
 .netlify
 .wrangler
-
+.DS_Store
 # IDE
 .vscode/*
 !.vscode/extensions.json
